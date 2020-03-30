@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/peerjs@1.0.0/dist/peerjs.min.js"></script>
+    <script>
+        const peer = new Peer('peerjs', {
+            host: '13.76.231.102',
+            port: 1300,
+            path: '/myapp'
+        });
+    </script>
+
+    <script>
+
+        // var conn = peer.connect('another-peers-id');
+        // // on open will be launch when you successfully connect to PeerServer
+        // conn.on('open', function () {
+        //     // here you have conn.id
+        //     conn.send('hi!');
+        // });
+        peer.on('open', function () {
+            console.log('aaaaaaaa');
+            
+        });
+    </script>
+</body>
+
+</html>
